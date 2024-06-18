@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Lista_de_planetas</string>
+    <string name="app_name">Lista de Planetas</string>
+    <string name="mercurio_description">Mercurio es el planeta más pequeño de nuestro sistema solar. Es apenas un poco más grande que la Luna de la Tierra. Sin embargo, Mercurio no tiene lunas. Es el planeta más cercano al Sol, pero en realidad no es el más caliente..</string>
+    <string name="venus_description">Venus es el segundo planeta del sistema solar en orden de proximidad al Sol y el tercero más pequeño después de Mercurio y Marte. Al igual que Mercurio, carece de satélites naturales. Recibe su nombre en honor a Venus, la diosa romana del amor.</string>
+    <string name="tierra_description">El único planeta conocido con vida, tiene una atmósfera rica en oxígeno y una biosfera que soporta una diversidad de ecosistemas. La Tierra tiene un campo magnético que protege la vida de la radiación solar dañina.</string>
+    <string name="marte_description">Conocido por su color rojizo debido al óxido de hierro en su superficie. Tiene el volcán más alto del sistema solar, Olympus Mons, y evidencia de agua líquida en el pasado.</string>
+    <string name="jupiter_description">Es el gigante gaseoso más grande con una masa mayor que la suma de todos los otros planetas. Su característica más notable es la Gran Mancha Roja, una tormenta gigante que ha estado activa durante siglos.</string>
+    <string name="saturno_description"> Es famoso por sus anillos compuestos principalmente de hielo y roca. Saturno tiene 82 lunas conocidas, incluyendo a Titán, que es más grande que Mercurio.</string>
+    <string name="urano_description">Urano es el séptimo planeta desde el Sol. Tiene el tercer diámetro planetario más grande y la cuarta masa planetaria más grande del Sistema Solar.</string>
+    <string name="neptuno_description">Es conocido por sus fuertes vientos y tormentas grandes como la Gran Mancha Oscura. Neptuno tiene 14 lunas conocidas y es el planeta más lejano del Sol desde el reajuste planetario que excluyó a Plutón.</string>
+    <string name="planet_selected">Planeta seleccionado: %1$s</string>
+    <string name="mercurio">mercurio</string>
+    <string name="venus">venus</string>
+    <string name="tierra">tierra</string>
+    <string name="marte">marte</string>
+    <string name="jupiter">jupiter</string>
+    <string name="saturno">saturno</string>
+    <string name="urano">urano</string>
+    <string name="neptuno">neptuno</string>
 </resources>

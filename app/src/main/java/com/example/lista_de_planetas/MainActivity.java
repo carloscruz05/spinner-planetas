@@ -1,7 +1,6 @@
 package com.example.lista_de_planetas;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner planetSpinner;
     TextView planetDescription;
     ImageView planetImage;
-
     private List<Planet> planets;
 
     @Override
@@ -30,17 +27,15 @@ public class MainActivity extends AppCompatActivity {
         planetDescription = findViewById(R.id.planet_description);
         planetImage = findViewById(R.id.planet_image);
 
-
         planets = new ArrayList<>();
-        planets.add(new Planet("Mercurio", "Mercurio es el planeta más pequeño del Sistema Solar y el más cercano al Sol.", R.drawable.mercurio));
-        planets.add(new Planet("Venus", "Venus es el segundo planeta desde el Sol. Lleva el nombre de la diosa romana del amor y la belleza.", R.drawable.venus));
-        planets.add(new Planet("Tierra", "La Tierra es el tercer planeta desde el Sol y el único objeto astronómico conocido que alberga vida.", R.drawable.tierra));
-        planets.add(new Planet("Marte", "Marte es el cuarto planeta desde el Sol y el segundo más pequeño del Sistema Solar.", R.drawable.marte));
-        planets.add(new Planet("Júpiter", "Júpiter es el planeta más grande del Sistema Solar y el quinto desde el Sol.", R.drawable.jupiter));
-        planets.add(new Planet("Saturno", "Saturno es el sexto planeta desde el Sol y el segundo más grande del Sistema Solar, después de Júpiter.", R.drawable.saturno));
-        planets.add(new Planet("Urano", "Urano es el séptimo planeta desde el Sol. Tiene el tercer diámetro planetario más grande y la cuarta masa planetaria más grande del Sistema Solar.", R.drawable.urano));
-        planets.add(new Planet("Neptuno", "Neptuno es el octavo y más lejano planeta conocido del Sistema Solar desde el Sol.", R.drawable.neptuno));
-
+        planets.add(new Planet(getString(R.string.mercurio), getString(R.string.mercurio_description), R.drawable.mercurio));
+        planets.add(new Planet(getString(R.string.venus), getString(R.string.venus_description), R.drawable.venus));
+        planets.add(new Planet(getString(R.string.tierra), getString(R.string.tierra_description), R.drawable.tierra));
+        planets.add(new Planet(getString(R.string.marte), getString(R.string.marte_description), R.drawable.marte));
+        planets.add(new Planet(getString(R.string.jupiter), getString(R.string.jupiter_description), R.drawable.jupiter));
+        planets.add(new Planet(getString(R.string.saturno), getString(R.string.saturno_description), R.drawable.saturno));
+        planets.add(new Planet(getString(R.string.urano), getString(R.string.urano_description), R.drawable.urano));
+        planets.add(new Planet(getString(R.string.neptuno), getString(R.string.neptuno_description), R.drawable.neptuno));
 
         ArrayAdapter<Planet> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, planets);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -52,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 Planet selectedPlanet = (Planet) parent.getItemAtPosition(position);
                 planetDescription.setText(selectedPlanet.getDescription());
                 planetImage.setImageResource(selectedPlanet.getImageResourceId());
-                Toast.makeText(MainActivity.this, "Planeta seleccionado: " + selectedPlanet.getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getString(R.string.planet_selected, selectedPlanet.getName()), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -61,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 planetImage.setImageDrawable(null);
             }
         });
-
-
-      
     }
 }
 
